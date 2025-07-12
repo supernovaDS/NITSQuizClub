@@ -6,10 +6,10 @@ server/node_modules/
 # Logs
 *.log
 
-# Env files
-.env
-client/.env
-server/.env
+# # Env files
+# .env
+# client/.env
+# server/.env
 
 # Build folders
 client/build/
