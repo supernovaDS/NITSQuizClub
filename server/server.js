@@ -12,7 +12,12 @@ const app = express();
 const port = process.env.PORT || 4000
 connectDB();
 
-const allowedOrigins = ['http://localhost:5173']
+const allowedOrigins = [
+  'http://localhost:5173',
+  'https://nits-qc.vercel.app',
+  'https://nits-qc-supernovadss-projects.vercel.app',
+  'https://nits-qc-git-main-supernovadss-projects.vercel.app'
+];
 
 app.use(express.json());
 app.use(cookieParser());
