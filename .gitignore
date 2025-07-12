@@ -7,9 +7,9 @@ server/node_modules/
 *.log
 
 # # Env files
-# .env
-# client/.env
-# server/.env
+.env
+client/.env
+server/.env
 
 # Build folders
 client/build/
