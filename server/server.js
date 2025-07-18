@@ -3,9 +3,10 @@ import cors from "cors";
 import 'dotenv/config';
 import cookieParser from "cookie-parser";
 import authRouter from './routes/authRoutes.js'
-
+import geminiRouter from "./routes/geminiRoutes.js";
 import connectDB from "./config/mongodb.js";
 import userRouter from "./routes/userRoutes.js";
+
 
 
 const app = express();
@@ -37,6 +38,7 @@ app.use(cors(corsOptions));
 
 import session from 'express-session';
 
+
 app.use(session({
   secret: process.env.SESSION_SECRET || 'qc_secret_123',
   resave: false,
@@ -55,6 +57,7 @@ app.get("/" , (req, res) => {
 });
 app.use('/api/auth' , authRouter);
 app.use('/api/user' , userRouter);
+app.use('/api/gemini' , geminiRouter);
 
 app.listen(port, () => {
     console.log("Server started on Port : ${port}")
